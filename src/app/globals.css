@@ -1,26 +1,170 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import 'tailwindcss';
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.font-aktiv {
+  font-family: 'aktiv-grotesk-extended', 'Aktiv Grotesk Ex', Arial, sans-serif;
+}
+
+.font-pretendard {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.ohr-page {
+  width: min(100%, var(--canvas-width, 1440px));
+}
+
+.key-capabilities {
+  display: flex;
+  gap: 2px;
+}
+
+.key-capability-card {
+  position: relative;
+  height: var(--key-cards-height, 632px);
+  flex: 1 1 0;
+  overflow: hidden;
+  min-width: 0;
+  transition: flex-grow 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.key-capabilities:has(.key-capability-card:hover) .key-capability-card {
+  flex-grow: 1;
+}
+
+.key-capabilities:has(.key-capability-card:hover) .key-capability-card:hover {
+  flex-grow: 5.06;
+}
+
+.key-capability-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(102, 102, 102, 0) 27.453%,
+    rgba(0, 0, 0, 0.8) 82.911%
+  );
+  transition: backdrop-filter 420ms ease;
+}
+
+.key-capability-card:hover .key-capability-overlay {
+  backdrop-filter: blur(4px);
+}
+
+.key-capability-content {
+  position: relative;
+  z-index: 1;
+  height: 491px;
+  margin-top: 65px;
+  padding: 0 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.key-capability-title {
+  color: #ffffff;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1;
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+
+.key-capability-detail {
+  display: block;
+  width: min(460px, 50%);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  margin-left: 36px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 260ms ease, transform 320ms ease;
+  pointer-events: none;
+}
+
+.key-capabilities:has(.key-capability-card:hover)
+  .key-capability-card:hover
+  .key-capability-detail {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.key-capabilities:has(.key-capability-card:hover) .key-capability-title {
+  opacity: 0;
+}
+
+.key-capabilities:has(.key-capability-card:hover)
+  .key-capability-card:hover
+  .key-capability-title {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .ohr-page {
+    --canvas-width: 390px;
+    --hero-height: 233px;
+    --intro-height: 329px;
+    --overlay-height: 233px;
+    --key-title-height: 116px;
+    --key-cards-height: 703px;
+    --office-section-height: 320px;
+    --office-card-height: 287px;
+    --footer-dark-height: 233px;
+    --footer-white-height: 191px;
+  }
+
+  .key-capabilities {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .key-capability-card {
+    height: 233px;
+    flex: none;
+  }
+
+  .key-capabilities:hover .key-capability-card,
+  .key-capabilities:hover .key-capability-card:hover {
+    flex: none;
+  }
+
+  .key-capability-overlay {
+    backdrop-filter: blur(3px);
+  }
+
+  .key-capability-content {
+    height: 100%;
+    margin-top: 0;
+    padding: 20px;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .key-capability-title {
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .key-capability-detail {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    opacity: 1;
+    transform: none;
+  }
 }
