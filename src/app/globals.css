@@ -108,18 +108,18 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .ohr-page {
-    --canvas-width: 390px;
-    --hero-height: 233px;
-    --intro-height: 329px;
-    --overlay-height: 233px;
-    --key-title-height: 116px;
-    --key-cards-height: 703px;
-    --office-section-height: 320px;
-    --office-card-height: 287px;
-    --footer-dark-height: 233px;
-    --footer-white-height: 191px;
+    --canvas-width: 100%;
+    --hero-height: 589px;
+    --intro-height: 746px;
+    --overlay-height: 746px;
+    --key-title-height: 152px;
+    --key-cards-height: 1221px;
+    --office-section-height: 466px;
+    --office-card-height: 426px;
+    --footer-dark-height: 750px;
+    --footer-white-height: 157px;
   }
 
   .key-capabilities {
@@ -128,7 +128,7 @@ body {
   }
 
   .key-capability-card {
-    height: 233px;
+    height: 407px;
     flex: none;
   }
 
@@ -138,33 +138,57 @@ body {
   }
 
   .key-capability-overlay {
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(20px);
   }
 
   .key-capability-content {
     height: 100%;
     margin-top: 0;
-    padding: 20px;
-    align-items: flex-end;
+    padding: 45px 16px;
+    align-items: center;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 8px;
+    justify-content: center;
+    gap: 36px;
   }
 
   .key-capability-title {
-    width: 100%;
-    font-size: 20px;
+    width: min(360px, 100%);
+    font-size: 24px;
     text-align: left;
   }
 
   .key-capability-detail {
     display: block;
-    width: 100%;
+    width: min(360px, 100%);
     margin-left: 0;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: -0.24px;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: -0.32px;
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (max-width: 393px) {
+  .ohr-page {
+    --canvas-width: 393px;
+  }
+
+  .key-capabilities {
+    width: 393px;
+    gap: 0;
+  }
+
+  .key-capability-card {
+    width: 393px;
+  }
+
+  .key-capability-content {
+    padding: 45px 0;
+  }
+
+  .key-capability-title,
+  .key-capability-detail {
+    width: 360px;
   }
 }

@@ -53,7 +53,7 @@ export default function CursorFollower() {
   return (
     <div
       ref={cursorRef}
-      className="fixed left-0 top-0 z-9999 size-[84px] rounded-full pointer-events-none bg-[rgba(255,255,255,0.22)] will-change-transform max-md:hidden"
+      className="fixed left-0 top-0 z-9999 size-[84px] rounded-full pointer-events-none bg-[rgba(255,255,255,0.22)] will-change-transform max-[1280px]:hidden"
       aria-hidden="true"
     />
   );
