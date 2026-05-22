@@ -1,5 +1,6 @@
 export const ASSETS = {
   hero: '/images/ohr/hero.jpg',
+  moHero: '/images/ohr/mo-hero.png',
   mission: '/images/ohr/mission.jpg',
   global: '/images/ohr/global.jpg',
   office: '/images/ohr/office.jpg',

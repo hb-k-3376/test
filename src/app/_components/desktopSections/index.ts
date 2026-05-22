@@ -1,0 +1,9 @@
+export { DesktopHeroSection } from './DesktopHeroSection';
+export { DesktopIntroSection } from './DesktopIntroSection';
+export { DesktopOverlaySection } from './DesktopOverlaySection';
+export { DesktopKeyCapabilitiesTitle } from './DesktopKeyCapabilitiesTitle';
+export { DesktopKeyCapabilitiesSection } from './DesktopKeyCapabilitiesSection';
+export { DesktopOfficeSection } from './DesktopOfficeSection';
+export { DesktopClosingSection } from './DesktopClosingSection';
+export { DesktopFooterSection } from './DesktopFooterSection';
+export { MobileKeyCapabilitiesSection } from './MobileKeyCapabilitiesSection';

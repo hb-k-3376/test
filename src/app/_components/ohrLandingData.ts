@@ -1,5 +1,5 @@
 export const DESKTOP_LAYOUT = {
-  heroHeight: 100,
+  heroHeight: 90,
   introHeight: 746,
   overlayHeight: 746,
   keyTitleHeight: 220,

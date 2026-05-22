@@ -18,7 +18,8 @@ import {
   DesktopKeyCapabilitiesTitle,
   DesktopOfficeSection,
   DesktopOverlaySection,
-} from './OhrLandingDesktopSections';
+  MobileKeyCapabilitiesSection,
+} from './desktopSections';
 
 export default function OhrLandingDesktop() {
   return (
@@ -36,8 +37,11 @@ export default function OhrLandingDesktop() {
         } as CSSProperties
       }
     >
+      {/* hero */}
       <DesktopHeroSection />
+      {/* intro */}
       <DesktopIntroSection />
+      {/* mission */}
       <DesktopOverlaySection
         imageSrc={ASSETS.mission}
         overlayClassName="bg-[rgba(0,0,0,0.5)]"
@@ -50,8 +54,13 @@ export default function OhrLandingDesktop() {
           mobile: MISSION_BODY_LINES_MOBILE,
         }}
       />
+      {/* key capabilities */}
       <DesktopKeyCapabilitiesTitle />
+      {/* desktop */}
       <DesktopKeyCapabilitiesSection />
+      {/* mobile */}
+      <MobileKeyCapabilitiesSection />
+      {/* global */}
       <DesktopOverlaySection
         imageSrc={ASSETS.global}
         overlayClassName="bg-[rgba(0,0,0,0.42)]"
@@ -64,13 +73,16 @@ export default function OhrLandingDesktop() {
           mobile: GLOBAL_BODY_LINES_MOBILE,
         }}
       />
+      {/* office */}
       <DesktopOfficeSection />
+      {/* closing */}
       <DesktopClosingSection
         closingLines={{
           desktop: CLOSING_LINES_DESKTOP,
           mobile: CLOSING_LINES_MOBILE,
         }}
       />
+      {/* footer */}
       <DesktopFooterSection />
     </div>
   );
