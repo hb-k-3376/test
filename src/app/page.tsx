@@ -1,10 +1,9 @@
 import CursorFollower from './_components/CursorFollower';
-import OhrLandingView from './_components/OhrLandingView';
-
+import OhrLandingDesktop from './_components/OhrLandingDesktop';
 export default function Home() {
   return (
     <main className="overflow-x-hidden bg-white">
-      <OhrLandingView />
+      <OhrLandingDesktop />
       <CursorFollower />
     </main>
   );
