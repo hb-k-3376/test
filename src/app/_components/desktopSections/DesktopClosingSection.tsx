@@ -8,7 +8,7 @@ export function DesktopClosingSection({ closingLines }: DesktopClosingSectionPro
   return (
     <section className="bg-black flex flex-col h-(--footer-dark-height) items-center justify-center w-full text-white">
       <AktivReveal className="w-full">
-        <div className="leading-none relative text-[28px] md:text-[30px] text-center uppercase font-aktiv">
+        <div className="relative text-[28px] md:text-[30px] text-center uppercase font-aktiv">
           <div className="md:hidden">
             {closingLines.mobile.map((line, index) =>
               line ? (
@@ -21,7 +21,7 @@ export function DesktopClosingSection({ closingLines }: DesktopClosingSectionPro
                   className="h-[32px]"
                   aria-hidden="true"
                 />
-              )
+              ),
             )}
           </div>
           <div className="hidden md:block">

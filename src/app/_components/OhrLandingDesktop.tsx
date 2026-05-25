@@ -66,7 +66,7 @@ export default function OhrLandingDesktop() {
         overlayClassName="bg-[rgba(0,0,0,0.42)]"
         titleLines={{
           desktop: ['Beyond Korea to the global market'],
-          mobile: ['Beyond', 'Korea to the', 'global market'],
+          mobile: ['Beyond', 'Korea to the', 'global', 'market'],
         }}
         bodyLines={{
           desktop: GLOBAL_BODY_LINES_DESKTOP,

@@ -37,7 +37,7 @@ export function DesktopOverlaySection({
         <div className={`absolute inset-0 ${overlayClassName}`} />
       </div>
       <AktivReveal className="w-full">
-        <div className="relative text-[28px] md:text-[30px] leading-none text-center uppercase">
+        <div className="relative text-[28px] md:text-[40px] text-center uppercase">
           <p className="md:hidden">
             {titleLinesMobile.map((line, index) => (
               <span key={`mobile-title-${line}-${index}`}>

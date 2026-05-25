@@ -4,7 +4,7 @@ import { HEAD_OFFICE } from '../ohrLandingData';
 
 export function DesktopOfficeSection() {
   return (
-    <section className="h-[466px] md:h-(--office-section-height) flex items-center justify-center p-9">
+    <section className="h-[466px] md:h-(--office-section-height) flex items-center justify-center px-[15px] py-5 md:px-9 md:py-9">
       <div className="relative flex flex-col gap-[35px] h-full rounded-xl overflow-hidden items-center justify-center w-full">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
           <Image
@@ -25,7 +25,7 @@ export function DesktopOfficeSection() {
         <p className="relative z-10 h-[43px] text-white text-[16px] md:text-[18px] text-center uppercase whitespace-nowrap font-aktiv font-medium">
           {HEAD_OFFICE.tel}
         </p>
-        <p className="relative z-10 h-[43px] text-white text-[14px] md:text-[18px] text-center uppercase font-aktiv font-medium">
+        <p className="relative z-10 h-[43px] text-white text-[12px] md:text-[18px] text-center uppercase font-aktiv font-medium">
           {HEAD_OFFICE.email}
         </p>
       </div>

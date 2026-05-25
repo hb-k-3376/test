@@ -69,7 +69,7 @@ export function MobileKeyCapabilitiesSection() {
                     : 'max-h-0 opacity-0 mt-0'
                 }`}
               >
-                <p className="text-white uppercase font-semibold text-[16px] leading-[32px] tracking-[-0.32px]">
+                <p className="text-white uppercase font-semibold text-[16px] leading-[32px] tracking-[-0.32px] whitespace-pre-wrap">
                   {capability.detail}
                 </p>
               </div>
